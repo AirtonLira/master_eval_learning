@@ -19,6 +19,9 @@ dist/
 .env
 .env.local
 .env.*.local
+llm_judge_rag/.env
+llm_judge_rag/.env.local
+llm_judge_rag/.env.*.local
 
 # Test / coverage artifacts
 .pytest_cache/

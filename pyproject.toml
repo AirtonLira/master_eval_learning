@@ -2,6 +2,7 @@
 name = "my-master-eval-learning"
 version = "0.1.0"
 description = "Módulo 1 — Fundamentos de Eval para LLMs"
+package-mode = false
 authors = [
     {name = "Airton Lira Junior",email = "airton.lira@aro.team"}
 ]
@@ -9,9 +10,15 @@ requires-python = "^3.12"
 dependencies = [
     "anthropic (>=0.96.0,<0.97.0)",
     "python-dotenv (>=1.2.2,<2.0.0)",
-    "openai (>=2.32.0,<3.0.0)"
+    "openai (>=2.32.0,<3.0.0)",
+    "deepeval (>=3.9.7,<4.0.0)",
+    "pytest (>=9.0.3,<10.0.0)",
+    "chromadb (>=1.5.8,<2.0.0)"
 ]
 
+
+[tool.poetry]
+package-mode = false
 
 [build-system]
 requires = ["poetry-core>=2.0.0,<3.0.0"]
