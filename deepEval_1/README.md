@@ -181,7 +181,7 @@ deepEval_1/
 ## Próximos passos sugeridos (para o projeto maior)
 
 - [ ] Avaliação com a biblioteca `deepeval` — métricas LLM-based out-of-the-box
-- [ ] RAG Evaluation completo: `ContextualPrecision`, `ContextualRecall`, `Faithfulness`
+- [x] RAG Evaluation completo: `ContextualPrecision`, `ContextualRecall`, `Faithfulness` → implementado em [`llm_judge_rag`](../llm_judge_rag/README.md)
 - [ ] Agent Evaluation: avaliação de trajetórias de agentes multi-step
 - [ ] Benchmark com datasets públicos (MMLU, HellaSwag, TruthfulQA)
 - [ ] Output em JSON/CSV para análise e dashboards
