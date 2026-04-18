@@ -65,7 +65,7 @@ class OpenRouterJudge(DeepEvalBaseLLM):
 
     def get_model_name(self) -> str:
         """Nome do modelo — exibido nos relatórios do DeepEval."""
-        return f"openrouter/{self.model}"
+        return self.model
 
     def load_model(self):
         """
@@ -88,7 +88,13 @@ class OpenRouterJudge(DeepEvalBaseLLM):
             temperature=0,      # determinístico para avaliação
             max_tokens=1024,
         )
-        return response.choices[0].message.content
+        content = response.choices[0].message.content
+        if content is None:
+            raise ValueError(
+                f"O modelo '{self.model}' retornou content=None. "
+                "Possíveis causas: rate limit, content filter ou falha do provider."
+            )
+        return content
 
     async def a_generate(self, prompt: str, **kwargs) -> str:
         """
@@ -101,7 +107,13 @@ class OpenRouterJudge(DeepEvalBaseLLM):
             temperature=0,
             max_tokens=1024,
         )
-        return response.choices[0].message.content
+        content = response.choices[0].message.content
+        if content is None:
+            raise ValueError(
+                f"O modelo '{self.model}' retornou content=None. "
+                "Possíveis causas: rate limit, content filter ou falha do provider."
+            )
+        return content
 
 
 # ---------------------------------------------------------------------------
