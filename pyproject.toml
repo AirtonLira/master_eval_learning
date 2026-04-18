@@ -1,0 +1,25 @@
+[project]
+name = "my-master-eval-learning"
+version = "0.1.0"
+description = "Módulo 1 — Fundamentos de Eval para LLMs"
+authors = [
+    {name = "Airton Lira Junior",email = "airton.lira@aro.team"}
+]
+requires-python = "^3.12"
+dependencies = [
+    "anthropic (>=0.96.0,<0.97.0)",
+    "python-dotenv (>=1.2.2,<2.0.0)",
+    "openai (>=2.32.0,<3.0.0)"
+]
+
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[dependency-groups]
+dev = [
+    "pytest (>=9.0.3,<10.0.0)",
+    "ruff (>=0.15.11,<0.16.0)",
+    "black (>=26.3.1,<27.0.0)"
+]
