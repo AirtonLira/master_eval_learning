@@ -23,6 +23,8 @@ llm_judge_rag/.env
 llm_judge_rag/.env.local
 llm_judge_rag/.env.*.local
 
+ragas/.env
+
 # Test / coverage artifacts
 .pytest_cache/
 .coverage
